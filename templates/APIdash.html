@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="topnav">
+  <a class="active" href="#home">API Dashboard</a>
+  <a href="http://127.0.0.1:5000/jwtgeneration">JWT Token</a>
+  <a href="#news">LogOut</a>
+</div>
+
+<div class ="card-wrapper">
+    <div class="card">
+      
+        <h1 class="center">Get all internships <b>GET /Api_Dashboard/Internships</b></h1>
+        <form name="get_all"  action="/Api_Dashboard/Internships" method="post">
+  
+          <p class="error" error--hidden></p>
+        
+          <input type="submit" value="Get all internships" class="btn">
+        </form>
+      </div>
+  
+    </div>
+
+
+<div class ="card-wrapper">
+        <div class="card">
+          
+            <h1 class="center">Get internships by position <b>GET</b> /Api_Dashboard/Internship</h1>
+            <form name="get_by_name"  action="/Api_Dashboard/Internship" method="post">
+
+                <label for="name">Internship position</label>
+                <input type="text" id="internship_position" name="internship_position" class="field" required>
+                <p class="error" error--hidden></p>
+            
+              <input type="submit" value="Get Internship" class="btn">
+
+            </form>
+          </div>
+      
+</div>
+
+
+
+
+<div class ="card-wrapper">
+  <div class="card">
+    
+      <h1 class="center">Add an Internship<b>/internship/add</b></h1>
+      <form name="add_form"  action="/internship/add" method="post">
+
+
+        <label for="name">Intership Position</label>
+        <input type="text" name="internship_position" class="field" required>
+        
+      
+        <label for="name">Company</label>
+        <input type="text" name="Company" class="field" required>
+
+        <label for="name">Application Details</label>
+        <input type="text" name="App_details" class="field" required>
+
+        <label for="name">Type</label>
+        <input type="text" name="type" class="field" required>
+
+        <label for="name">Starting Date</label>
+        <input type="text" name="Starting_date" class="field" required>
+
+        <p class="error" error--hidden></p>
+      
+        <input type="submit" value="Add" class="btn">
+      </form>
+    </div>
+
+  </div>
+
+  <div class ="card-wrapper">
+    <div class="card">
+      
+        <h1 class="center">Update an Internship<b>/Internship/update</b></h1>
+        <form name="add_form"  action="/Internship/update" method="post">
+  
+  
+          <label for="name">Intership Position</label>
+          <input type="text" name="internship_position" class="field" required>
+          
+        
+          <label for="name">Company</label>
+          <input type="text" name="Company" class="field" required>
+  
+          <label for="name">Application Details</label>
+          <input type="text" name="App_details" class="field" required>
+  
+          <label for="name">Type</label>
+          <input type="text" name="type" class="field" required>
+  
+          <label for="name">Starting Date</label>
+          <input type="text" name="Starting_date" class="field" required>
+  
+          <p class="error" error--hidden></p>
+        
+          <input type="submit" name="UPDATE" value="Update" class="btn">
+        </form>
+      </div>
+  
+    </div>
+
+
+  
+  
+{% endblock %}

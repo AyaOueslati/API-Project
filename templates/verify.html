@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation Code Verification</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/styles.css">  
+</head>
+<body>
+<div class ="card-wrapper">
+<div class="card">
+<form action="/validate" method="post">
+    <h1>One time Code has been sent to the mail id. please check </h1>
+    <p>by <b>FutureGuide</b></p>
+    <b>Enter Confirmation code:</b> <input type="text" name="otp">
+    <input type="submit" value="Submit" class="btn">
+</div>
+</div>
+</form>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/scripts.js"></script>
+
+</body>
+</html>
